@@ -64,12 +64,14 @@ class TimetableNotification extends Command
 
         $email = config('mail.notification.email');
 
-        Mail::to($email)
-            ->send(new Timetable(
-                $items,
-                $startOfWeek->translatedFormat('d. F Y'),
-                $endOfWeek->translatedFormat('d. F Y')
-            ));
+        
+
+        //Mail::to($email)
+           // ->send(new Timetable(
+           //     $items,
+            //    $startOfWeek->translatedFormat('d. F Y'),
+          //      $endOfWeek->translatedFormat('d. F Y')
+           // ));
 
 
         foreach ($items as $day => $lessons) {
